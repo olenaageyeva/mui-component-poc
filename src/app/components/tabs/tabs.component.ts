@@ -1,13 +1,16 @@
 import { Component, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
 
+
 @Component({
   selector: 'ec-tabs',
   template: `
     <mat-tab-group [(selectedIndex)]="selectedIndex">
       <mat-tab *ngFor="let tab of tabs" [label]="tab.title">
         <ng-template matTabContent>
-          <ng-content select="[tabContent]"></ng-content>
+          <ng-container *ngIf="tab.active">
+            <ng-content select="[tabContent]"></ng-content>
+          </ng-container>
         </ng-template>
       </mat-tab>
     </mat-tab-group>

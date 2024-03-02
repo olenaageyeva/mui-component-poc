@@ -8,6 +8,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { TabComponent } from './components/tab/tab.component';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ContentPageComponent } from './components/content-page/content-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     DemoPageComponent,
     TabComponent,
     TabsComponent,
-    AppComponent
+    AppComponent,
+    ContentPageComponent
     // other components
   ],
   imports: [
